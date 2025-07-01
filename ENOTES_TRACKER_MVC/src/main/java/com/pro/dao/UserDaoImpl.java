@@ -54,15 +54,7 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public List<Notes> getNotesByUser(User user) {
-//		String str = "from User where user=:us";
-//		Session session = sessionFactory.openSession();
-//	    Transaction tx = session.beginTransaction();
-//		Query<Notes> q = session.createQuery(str);
-//		q.setEntity("us",user);	
-//		tx.close();
-//		return q.getResultList();
-		
-		String hql = "from Notes where user = :us";
+	    String hql = "from Notes where user = :us";
 	    Session session = sessionFactory.openSession();
 	    Transaction tx = session.beginTransaction();
 
